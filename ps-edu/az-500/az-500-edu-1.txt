@@ -1,0 +1,46 @@
+Cloud Authenticaiton
+
+Password Hash Sync (PHS)
+    # Lowest effor of the three Azure AD Connect authenticatio nmethods
+    # Requires the least infrastructre of teh three options (sychronization only).
+    # Sycrhonizes a hash (of a hash) of user passwords.
+    # Doesn't immediatley enforce changes in on-premises account states
+    # Only supports Disabled Account, but not password expiry or account lockout. 
+
+Pass-through Authentication (PTA)
+    # Medium effort between the three Auzre AD Connect authenticaiton methods. 
+    # Requires sychronization and authentication infrastructure.
+    # USes an outbound network tunnet to support authenticaiton from on-prem. 
+    # Enforces the on-premises account policies at the time of sign-in.
+    # Supports additional account states (disabled, lockout, expiry, restricted).
+
+Active Driectory Federation Services (ADFS)
+    # Most complex of the three Azure AD Connect authentication methods.
+    # Requires synchrnization, ADFS, and web app proxy infrastructure.
+    # Requires inbound network connectivity as authenticaiton is handled on-prem.
+    # Supports advances scenarios (e.g., smart card auth, third-party MFA, etc).
+
+Azure AD External Identities
+
+Azure AD B2B
+# Guest Access - Azure AD B2B allows external users to be invited as guests, providing seamless, licenses access to resources
+# External Identities - Supports several identity providers, including work/shcool accounts, Gmail, FAcebook, SAML, and WS-Fed. 
+# Collaboration Settings =- Administrtors can confirgure external collaboration settings for external identities within the Azure AD tenant.
+
+Azure AD Business to Customer (B2C)
+# Identity Platform for a Custom Application - Azure AD B2C provides a centralized identity platform for a customer's application(based on Azure AD)
+# B2C Tenant - Idenitty information is stored with a dedicated B2C tenant (not within the customer's exisiting Azure AD tenant).
+# External Identitites - MAny different social identitites are available, as well as SAML and WS-Fed-based identity provider federation. 
+ 
+14/3 = 4.6 Sections a Day
+Monday - Introduction(done), The Azure AD Identity Platform(done), Hybrid Identity(done), Controlling Access (done), Securing Identities (done)
+
+Teusday - Security Virtual Networks (done), Security Integrated Networks (done)
+
+Wednesday - Security VM's(done), Security Apps (done), Security Data(done), Security App hosting(done), Security Storage(done), 
+ 
+Thursday - Security Databases(done), Security policies(done), Threat Protection(done), Monitoring Security 1(done), Monitoring Security 2(done)
+
+Friday - Conclusion, Practice Tests, Relax 
+
+Saturday - Exam

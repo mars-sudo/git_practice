@@ -1,0 +1,22 @@
+Azure Update Management - Components
+Automation Account - service to facilitate the process automation and configuration management.
+
+Hybrid Runbook Worker - Customer-managed Windows or Linux operating system which performs tasks.
+
+Log Analytics Workspace - Repository for log information. In this scenario, it is for updating management data.
+
+Log Analytics Agent - The software whi ch routes logs/metrics data from Linux or Windows to the workspace. 
+
+Securing Applications in Azure
+Managed Identities
+1. Azure AD Identities for Azure Resources - The platform manages integrated identities in Azure AD identities for Azure resources.
+2. Credential Security - Avoid the need for having to store credentials for your application/script within code.
+3. Support for several Azure resources - many services support managed identities, and these can authenticate to Azure AD. 
+
+Managed Identity - An Azure resource must be assigned a system or user-managed identity.
+Azure AD Service Principal - The managed identity establishes a service pricipal within Azure.
+Token Endpoint - Azure AD provides this as a place to retrieve an access pass for a resource.
+Access Toke - The access token can be used to authenticate with Azure AD.
+
+
+

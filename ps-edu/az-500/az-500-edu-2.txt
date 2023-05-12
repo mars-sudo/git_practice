@@ -1,0 +1,47 @@
+Security Virtual Networks
+Default system routes allow: 
+Internet connectivity - Using the 0.0.0.0/0 prefix, there is a default rout to the internet.
+Virtual Network connectivity - Traffic is automatically routed b/t subnets using all specifid address ranges.
+ Service-Specific Connectivity - Configuring some services results in route configuration (ex. VNet peering or ExpressRoute)
+
+Custom routes:
+Allow changes to the default routing behavior. For example - Blocking internet access (Using the none next hop type, 
+we can block internet access) or Forcing Traffic via Another Address (Using various next hop types, we can enforce traffic elsewhere
+for example via Azure Firewall or via an on-premises router using forced tunneling.)
+
+Special scenarios and configuration:
+Automatic System Routes - System routes can be automatically generated (ex. VNet Peering or service endpoints)
+System Routs and BGP - It is possible to use border gateway protocol (BGP) to help manage dynamic routing (ExpressRoute or VPN)
+Route Priority - When multiple routes contain the same address prefix, the following is used: Custom > BGP > System
+
+Azure Firewall 
+Deployment Overview
+1. Configure a Virtual Network - This can be an existing VNet, but is often a centralied VNet connected to your other VNets.
+2. Configure a Subnet - Azure Firewall must be deployed to a dedicated subnet called AzureFirewallSubnet. NSGs are disabled for this subnet.
+3. Configure Routing - In order to have VNet resources leverate Azure Firewall, a custom route must direct traffic to Azure Firewall.
+
+Configuration Overview
+Network Rules - Similar to NSGs, but focues on outbout filtering. These rules are processed before application rules.
+Application Rules - Application rules allow outbound security to be defined with the use of a FQDN.
+NAT Rules - With an NAT rule, we can configure inbound (DNAT) rules. Currently, outbound (SNAT) is managaed by Microsoft using all public IPs.
+
+Azure Firewall Manager
+Centralized management interface for Azure Firewall features and resources.
+
+Centralized Policies - Centrally manage the configuration of Azure Azure firewalls  
+Secure Virtual Networks - Manage Azure Firewall for virtual Networks
+Seucre Virtual Hub - Manage Azure Firewall for Azure Virtual WAN
+
+Securing Integrated Networks and Services
+VNet Peering - Designed for VNet-to-VNet connectivity, supports cross-subscription, cross-region, corss-Azure AD tenant,
+                Leverages the Microsoft Backbone for private IT address connectivity, Typically used for private, low-latency 
+                interconnectiity. 
+
+VPN - Designed for hypbrid connectivity (site-to-site, point-to-site), Supports similar VNet connectivity (cross-sub, cross-region),
+        Requires a public IP address to be used for connectivity, Generally used where encryption and/or transitive routing is needed. 
+
+ExpressRoute 
+ExpressRoute Circuit - The connectivity into Microsoft global infrastructure, which leverages both Microsft and partner edge networking.
+Peering - Private or Microsoft peering facilitates a secure connection to virtual networks or Microsoft 365, respectively.
+ExpressRoute Gateway - AVNet Gateway of ExpressRoute type. Must exist in a gateway subnet. SKU determines features, bandwidth, etc. 
+
