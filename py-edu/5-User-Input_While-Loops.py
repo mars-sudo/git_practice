@@ -11,7 +11,7 @@ name = input(prompt)
 print(f"\nHello, {name}!")
 
 age = input("How old are you? ")
-age =int(age)
+age = int(age) # You can have an int method or a float method
 if age > 18:
     print("You're older than 18!")
 
@@ -114,7 +114,7 @@ while polling_active:
 # Polling is complete. Show the results
 print("\n--- Poll Results ---")
 for name, response in responses.items():
-    print(f"{name} would like to clime {response}.")
+    print(f"{name} would like to climate {response}.")
 
 
 

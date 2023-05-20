@@ -9,7 +9,7 @@ class Car:
         self.odometer_reading = 0 # Attributes can be defined without being passed as a parameter. 
 
     def get_descriptive_name(self):
-        """Return a neatly formatted descritive name."""
+        """Return a neatly formatted descriptive name."""
         long_name = f"{self.year} {self.make} {self.model}"
         return long_name.title()
     

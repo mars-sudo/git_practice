@@ -21,7 +21,7 @@ class AnonymousSurvey:
             print(f"-{response}")
 
 
-# The class starts with a survey question that you provide and includes an epty list to store reponses.
+# The class starts with a survey question that you provide and includes an empty list to store reponses.
 # The class has methods to print the survey question, add a new response to the response list,
 # and print all the responses stored in the list. 
 

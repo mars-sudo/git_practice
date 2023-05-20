@@ -32,6 +32,7 @@ with open (filename) as file_object:
 
 pi_string = '' # To use this as a number you'll need to use the int() or float () function
 for line in lines:
+    int(pi_string)
     pi_string += line.strip()
 
 print(pi_string)

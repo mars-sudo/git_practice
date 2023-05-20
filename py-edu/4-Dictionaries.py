@@ -42,7 +42,7 @@ language = favorite_languages['keisha'].title()
 print(f"Keisha's favorite language is {language}.\n")
 print(f"{favorite_languages['reina'].title()}\n")
 
-# create names for the two variables tht will hold the key and value in each key-value pair.
+# create names for the two variables that will hold the key and value in each key-value pair.
 # you can choose any names you want for these two variables. 
 
 # SYNTAX - for k, v in dictionary.items():

@@ -40,7 +40,7 @@ print(f"My dog is {my_dog.age} years old.")
 my_dog.sit()
 my_dog.roll_over()
 
-your_dog = Dog('Rufus', 3) # This is the second instance.
+your_dog = Dog('Rufus', '3') # This is the second instance.
 print(f"Your dog's name is {your_dog.name}.")
 print(f"Your dog is {your_dog.age} years old.")
 your_dog.sit()
