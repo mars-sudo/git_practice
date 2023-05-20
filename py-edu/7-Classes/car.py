@@ -34,7 +34,7 @@ class Car:
     
 
 class Battery(): 
-    """A simple attemt to model a batter for an electric car."""
+    """A simple attempt to model a battery for an electric car."""
 
     def __init__(self,battery_size=50):
         """Inistialize the battery's attributes."""

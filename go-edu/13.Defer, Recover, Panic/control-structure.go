@@ -11,7 +11,7 @@ func main() {
 // Defer
 // Defer statement defers the execution of a function until the surrounding function returns
 // Multiple defers are pushed into stack and executes in Last In First Out (LIFO) order
-// Dfer genrally used to cleanup resources like file, database connection, etc.
+// Defer genrally used to cleanup resources like file, database connection, etc.
 
 // Recover
 // Recover is another built-in funciton in go

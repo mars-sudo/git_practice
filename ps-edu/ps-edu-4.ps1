@@ -1,4 +1,4 @@
-# Let's grab all the computer in AD, but for teting just use LeLettre9
+# Let's grab all the computer in AD, but for tesing just use _____
 
 Get-ADComputer
 Get-ADComputer L7100
@@ -18,7 +18,7 @@ Get-ADUser -Filter {Name -eq "Rick Sanchez"} -Properties PasswordExpired
 
 Get-ADUser | Get-MemberGet-Help Get-ADUser -Full
 
-Get-AdUser -Filter {UserPrincipalName -eq "mmartin@otsu.org"}
+Get-AdUser -Filter {UserPrincipalName -eq "rsanchez@sample.org"}
 
 Get-ADUser -Filter * -Properties *
 
@@ -89,7 +89,7 @@ foreach ($group in $groups){
     $output = @{}
     # Begin assigning keys to hashtable
     $output.GroupName = $group.Name
-    # Captuer all the group members
+    # Capture all the group members
     $groupMembers = Get-AdGroupMember -Identity $group | Where {$_.ObjectClass -eq 'User'} | Select-Object -Property Name
     # Only output a custom object if there were members in that group
     if ($groupMembers){
