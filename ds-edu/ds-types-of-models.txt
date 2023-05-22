@@ -1,0 +1,21 @@
+Essentials Variables:
+Independent variable is denoted as "x" variable (horizontal x axis). 
+Dependent variable is denoted as "y" variable(vertical y axis).
+
+
+Linear Regression - 
+
+
+Logistic Regression- 
+
+
+Decision Trees - 
+
+
+Random Forest -
+
+
+XGBoost/LightGBM - 
+
+
+Artificial Neural Networks - 

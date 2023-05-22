@@ -21,7 +21,7 @@ melbourne_data.columns
 # dropna drops missing values (think of na as "not available")
 melbourne_data = melbourne_data.dropna(axis=0)
 
-# USe the dot notation to select the column we want to predict
+# Use the dot notation to select the column we want to predict
 # which is call the prediction target.
 # By convention, the prediction target is called y.
 # So the code needed to save the house prices in the data is
@@ -49,7 +49,7 @@ X.head()
 # The steps to building and using a model are:
 # 1. Define: What type of model will it be? A Decision Tree or some other model? 
 # 2. Fit: Capture patterns from provided data. 
-# 3. Predit: Just what is sounds like
+# 3. Predict: Just what is sounds like
 # 4. Evaluate: Determine how accurate the model's predictions are. 
 
 # Here's an example of defining a decision tree model with scikit-learn
@@ -66,9 +66,15 @@ melbourne_model.fit(X, y)
 # In practice, you'll want to make predictions for new houses coming on the market
 # rather than the houses we already have prices for. But we'll make
 # predictions for the first few rows of the training data to see how the predict fuction works.
+predictions = melbourne_model.predict(X)
+print(predictions)
 
-print("Making predictions for the following 5 houses:")
-print(X.head())
-print("The predictions are")
+print("First in-sample predictions:", melbourne_model.predict(X.head()))
+print("Actual target values for those homes:", y.head().tolist())
+
+print(predictions)
 print(melbourne_model.predict(X.head()))
+y.head() # compare the top few predictions to the actual home values (in y).
+
+
 
