@@ -2,7 +2,7 @@
 # Building Blocks, group command and logic together
 # Three phases to functions: Input > Process > Output
 
-$demoPath = "C:\Users\Mars\Mars-Scripts\ps-edu"
+$demoPath = "C:\Users\~"
 
 # Scripts are extremely commmon in Powershell. A script is just a text file with a ps1 extension. They can be excuted as such
 powershell.ext -file $demoPath\ps-script-1.ps1
@@ -30,7 +30,7 @@ Functions Find-TextFile{
         [Parameter()]
         $Name
     )
-    Get-ChildItem -Path 'C:\Users\Mars\Mars-Scripts\ps-edu' -Filter "*pcnames.txt"
+    Get-ChildItem -Path 'C:\Users\~' -Filter "*pcnames.txt"
 }
 
 Functions Set-TextFile{
@@ -46,4 +46,4 @@ Functions Set-TextFile{
 
 $textFile = FindTextFile -Name pcnames
 Set-TextFile =Path $textfile.FullName -Value 'new-name'
-Get-Content -Path 'C:\Users\Mars\Mars-Scripts\ps-edu\pcnames.txt'
+Get-Content -Path 'C:\Users\~'

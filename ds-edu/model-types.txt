@@ -9,7 +9,8 @@ Linear Regression -
 Logistic Regression- 
 
 
-Decision Trees - 
+Decision Trees - A tree's depth is a measure of how many splits it makes before coming to a prediction.
+In practice, it's not uncommon for a tree to have 10 splits between the top level (all houses) and a leaf. 
 
 
 Random Forest -

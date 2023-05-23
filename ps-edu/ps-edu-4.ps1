@@ -13,19 +13,19 @@ Get-ADComputer -Filter * -Propteries * | Select-Object -First 1
 Get-ADUsers
 
 Get-ADUser -Filter *
-Get-ADUser -Filter {Name -eq "Rick Sanchez"}
-Get-ADUser -Filter {Name -eq "Rick Sanchez"} -Properties PasswordExpired
+Get-ADUser -Filter {Name -eq "Ruby Teusday"}
+Get-ADUser -Filter {Name -eq "Ruby Teusday"} -Properties PasswordExpired
 
 Get-ADUser | Get-MemberGet-Help Get-ADUser -Full
 
-Get-AdUser -Filter {UserPrincipalName -eq "rsanchez@sample.org"}
+Get-AdUser -Filter {UserPrincipalName -eq "rteusday@sample.org"}
 
 Get-ADUser -Filter * -Properties *
 
-Get-ADUser -Filter 'Name -like "*Sanchez"' | FT Name,SamAccountName,ObjectClass -A
+Get-ADUser -Filter 'Name -like "*Teusday"' | FT Name,SamAccountName,ObjectClass -A
 
 # Start Example
-$demoPath = "C:\Users\Mars\Mars-Scripts\ps-edu\powershell"
+$demoPath = "C:\Users\~"
 
 # Le's find usernames for a list of FirstName/LastName employees in a csv
 # This is a CSV file, but this can be a SQL DB, an Oracle DB, Excel, or any data source
