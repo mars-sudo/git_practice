@@ -49,14 +49,20 @@ from sklearn.model_selection import train_test_split
 # split data into training and validation data, for both features and target.
 # The split is based on a random number generator. Supplying a numeric value 
 # to the random_state argument gaurantees we get the same split every time we run this script.
-train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = 0)
+train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = 1)
 
 # Define model
-melbourne_model = DecisionTreeRegressor()
+melbourne_model = DecisionTreeRegressor(random_state=1)
 
-# Fit model
+# Fit training model
 melbourne_model.fit(train_X, train_y)
 
-# get the predicted prices on validation data
+# Get the predicted prices on validation data
 val_predictions = melbourne_model.predict(val_X)
 print(mean_absolute_error(val_y, val_predictions))
+
+# Print the top few validation predictions
+print(melbourne_model.predict(val_X.head()))
+# Print the top few actul prices from validation data
+print(melbourne_model.predict(train_X.head()))
+
