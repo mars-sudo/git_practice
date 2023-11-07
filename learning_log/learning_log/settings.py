@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     'learning_logs',
     'users',
 
+    # Third part apps.
+    'bootstrap4',
+
     
     # Default django apps.
     'django.contrib.admin',
@@ -135,7 +138,7 @@ LOGIN_URL = 'users:login'
 import django_heroku
 django_heroku.settings(locals())
 
-if os.environ.get('DEBUG')== 'TRUE':
-    DEBUG = True
-elif os.environ.get('DEBUG') == 'FALSE':
-    DEBUG = False
+# if os.environ.get('DEBUG')== 'TRUE':
+#    DEBUG = True
+# elif os.environ.get('DEBUG') == 'FALSE':
+#    DEBUG = False
